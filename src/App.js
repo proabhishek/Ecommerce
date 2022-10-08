@@ -6,23 +6,28 @@ function App() {
   const categories = [
        
     {
-      title: "Hats"
+      title: "Hats",
+      imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
     },
 
     {
-      title: "Jackets"
+      title: "Jackets",
+      imageUrl: 'https://i.ibb.co/px2tCc3/jackets.png',
     },
 
     {
-      title: "Sneakers"
+      title: "Sneakers",
+      imageUrl: 'https://i.ibb.co/0jqHpnp/sneakers.png',
     },
 
     {
-      title: "Womens"
+      title: "Womens",
+      imageUrl: 'https://i.ibb.co/GCCdy8t/womens.png',
     },
 
     {
-      title: "Mens"
+      title: "Mens",
+      imageUrl: 'https://i.ibb.co/R70vBrQ/men.png',
     }
 
   ]
@@ -37,10 +42,12 @@ function App() {
          
            <div className="categories">
               
-           {categories.map( (category)=>(
-            <div className="category-container"> 
+           {categories.map( ({title, imageUrl})=>(
+            <div className="category-container"
+             style={{backgroundImage: `url(${imageUrl})`}}
+            > 
                     <div className="category-body">
-                          <h2>{category.title}</h2>
+                          <h2>{title}</h2>
                           <p>Shop Now</p>
                      </div>
                 </div>
