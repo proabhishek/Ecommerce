@@ -1,13 +1,61 @@
 
+import "./categories.scss";
 
 function App() {
     
+  const categories = [
+       
+    {
+      title: "Hats"
+    },
+
+    {
+      title: "Jackets"
+    },
+
+    {
+      title: "Sneakers"
+    },
+
+    {
+      title: "Womens"
+    },
+
+    {
+      title: "Mens"
+    }
+
+  ]
+
+
+
+
+
 
   return (
     <div className="App">
-           <h1>Hello</h1>
+         
+           <div className="categories">
+              
+           {categories.map( (category)=>(
+            <div className="category-container"> 
+                    <div className="category-body">
+                          <h2>{category.title}</h2>
+                          <p>Shop Now</p>
+                     </div>
+                </div>
+           ))
+ }
+
+
+
+                
+
+           </div>
+        
     </div>
   );
 }
 
 export default App;
+
