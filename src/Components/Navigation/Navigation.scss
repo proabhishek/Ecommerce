@@ -1,0 +1,30 @@
+
+.navigation{
+     display: flex;
+     background-color: #FF6D28;
+     justify-content: space-between;
+     font-size: 1.5rem;
+     color: white;
+
+        .logo{
+            padding: 0 10px;
+        }
+
+
+     .nav-links {
+        a{
+            color: white;
+            margin-right: 10px;
+            text-decoration: none;
+        }
+     }
+
+     .icons{
+        padding: 0 10px;
+
+        span{
+            margin-right: 10px;
+        }
+     }
+}
+

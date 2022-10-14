@@ -1,5 +1,6 @@
 
 import Category from "./Category"
+import {Outlet, useNavigate} from "react-router-dom"
 import "./categories.scss"
 
 const categories = [
@@ -32,12 +33,18 @@ const categories = [
   ]
 
   const Categories = () => {
+    const navigate = useNavigate()
     return(
+      <div>
         <div className="categories">
               
             {categories.map( ({title, imageUrl})=>(
               <Category title={title} imageUrl={imageUrl} />
              ))}
+        </div>
+        {/* <Outlet /> */}
+
+        <button onClick={()=>navigate("/hats")}>Go to Hats Page</button>
 
         </div>
     )
